@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true, length: {maximum: 50, minimum: 2}
   
-  has_many :pins
+  has_many :pins, dependent: :destroy
 end
